@@ -7,4 +7,19 @@ h2. Instructions
 * Copy ext.er_cp_active_members.php to your system/extensions directory
 * Copy lang.er_cp_active_members.php to your system/language/english directory
 * Enable the extension in the Extensions Manager
-* Select which member groups see the active members (Super Admins only by default)
+
+h2. Customization
+
+* You can select which member group see the member list
+* You can change the inline CSS styles to tweak the appearance of the div wrapper
+
+h2. Change Log
+
+*+Oct 17, 2009: 1.1.0+*
+
+* Updated Extension Settings page
+* Added support for LG Addon Updater
+
+*Oct 16, 2009: 1.0.0*
+
+* Initial Release
