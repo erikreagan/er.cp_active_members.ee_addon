@@ -63,7 +63,7 @@ class Er_cp_active_members
          global $LANG, $DB, $PREFS;
 
          // Grab the member groups from our current site
-         $member_groups = $DB->query("SELECT group_id,site_id,group_title FROM exp_member_groups WHERE `site_id` = " . $PREFS->ini("site_id"));
+         $member_groups = $DB->query("SELECT group_id,site_id,group_title,can_access_cp FROM exp_member_groups WHERE `site_id` = " . $PREFS->ini("site_id") . " AND `can_access_cp` = 'y'");
 
          // Create an array of our member groups in the format that $settings needs
          foreach ($member_groups->result as $group)
@@ -73,6 +73,7 @@ class Er_cp_active_members
 
          $settings = array();
          $settings['groups'] = array('ms', $member_groups_array, '1');
+         $settings['css'] = 'margin: 0 19px';
          return $settings;
       }
       
@@ -88,7 +89,8 @@ class Er_cp_active_members
       global $DB;
 
       $settings = array(
-               'groups' => array('1')
+               'groups' => array('1'),
+               'css' => 'margin: 0 19px'
                );
 
       $hooks = array(
@@ -164,8 +166,7 @@ class Er_cp_active_members
    {
       global $EXT, $STAT, $SESS;
       $STAT = new Stats_CP();
-      $STAT->update_stats();
-      
+      $STAT->update_stats();      
       
       if ( ! in_array($SESS->userdata['group_id'], $this->settings['groups']) )
       {
@@ -186,7 +187,7 @@ class Er_cp_active_members
       
       $find = "<div class='copyright'>";
       $add = "
-      <div class='box' style='margin:0 19px;'>
+      <div class='box' style='".$this->settings['css']."'>
       <p><strong>Active Members:</strong> $list</p>
 </div>
 ".$find;

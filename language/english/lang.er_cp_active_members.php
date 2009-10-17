@@ -18,6 +18,9 @@ $L = array(
 'groups' =>
 'Choose which member groups get the see the member list in the CP',
 
+'css' =>
+'Inline CSS styles for div containing member list',
+
 
 
 // END
