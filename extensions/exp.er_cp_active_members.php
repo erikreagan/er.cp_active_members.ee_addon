@@ -186,7 +186,7 @@ class Er_cp_active_members
       
       $find = "<div class='copyright'>";
       $add = "
-      <div style='margin:0 19px;padding:10px;background:#ccc;border:1px solid #555;'>
+      <div class='box' style='margin:0 19px;'>
       <p><strong>Active Members:</strong> $list</p>
 </div>
 ".$find;
