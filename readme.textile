@@ -1,0 +1,10 @@
+h1. ER CP Active Members
+
+Display active member list in the CP footer
+
+h2. Instructions
+
+* Copy ext.er_cp_active_members.php to your system/extensions directory
+* Copy lang.er_cp_active_members.php to your system/language/english directory
+* Enable the extension in the Extensions Manager
+* Select which member groups see the active members (Super Admins only by default)
