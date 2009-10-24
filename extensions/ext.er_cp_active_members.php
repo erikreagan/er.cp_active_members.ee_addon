@@ -7,7 +7,7 @@
  * /system/extensions/ folder in your ExpressionEngine installation.
  *
  * @package ERCPActiveMembers
- * @version 1.1.0
+ * @version 1.1.1
  * @author Erik Reagan http://erikreagan.com
  * @copyright Copyright (c) 2009 Erik Reagan
  * @see http://erikreagan.com/projects/er_cp_active_members/
@@ -24,7 +24,7 @@ class Er_cp_active_members
    var $settings = array();
 
    var $name = 'ER CP Active Members';
-   var $version = '1.1.0';
+   var $version = '1.1.1';
    var $description = 'Displays active members in the footer of the CP';
    var $settings_exist = 'y';
    var $docs_url = '';
@@ -313,16 +313,16 @@ class Er_cp_active_members
       $STAT = new Stats_CP();
       $STAT->update_stats();      
       
+      if($EXT->last_call !== FALSE)
+		{
+			$out = $EXT->last_call;
+		}
+      
       if ( ! in_array($SESS->userdata['group_id'], $this->settings['groups']) )
       {
          return $out;
       }
-      
-      
-      if($EXT->last_call !== FALSE)
-      {
-         $out = $EXT->last_call;
-      }
+
       
       foreach ($STAT->stats['current_names'] as $member) {
          $list[] = $member[0];
@@ -338,6 +338,7 @@ class Er_cp_active_members
 ".$find;
 
       return str_replace($find, $add, $out);
+      // return $out;
       
    }
    

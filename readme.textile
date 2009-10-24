@@ -15,7 +15,11 @@ h2. Customization
 
 h2. Change Log
 
-*+Oct 17, 2009: 1.1.0+*
+*+Oct 24, 2009: 1.1.1+*
+
+* Fixed bug that didn't return other extension changes to hook if member_group was not allowed to see member list
+
+*Oct 17, 2009: 1.1.0*
 
 * Updated Extension Settings page
 * Added support for LG Addon Updater
