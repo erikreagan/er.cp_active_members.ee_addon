@@ -15,7 +15,11 @@ h2. Customization
 
 h2. Change Log
 
-*+Oct 24, 2009: 1.1.1+*
++*Mar 27, 2010: 1.1.2*+
+
+* Assigned license to add-on: "Attribution-Share Alike 3.0 Unported":http://creativecommons.org/licenses/by-sa/3.0/
+
+*Oct 24, 2009: 1.1.1*
 
 * Fixed bug that didn't return other extension changes to hook if member_group was not allowed to see member list
 

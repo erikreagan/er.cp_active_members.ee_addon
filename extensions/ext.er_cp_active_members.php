@@ -7,10 +7,11 @@
  * /system/extensions/ folder in your ExpressionEngine installation.
  *
  * @package ERCPActiveMembers
- * @version 1.1.1
+ * @version 1.1.2
  * @author Erik Reagan http://erikreagan.com
  * @copyright Copyright (c) 2009 Erik Reagan
  * @see http://erikreagan.com/projects/er_cp_active_members/
+ * @license http://creativecommons.org/licenses/by-sa/3.0/ Attribution-Share Alike 3.0 Unported 
  */
 
 
@@ -24,7 +25,7 @@ class Er_cp_active_members
    var $settings = array();
 
    var $name = 'ER CP Active Members';
-   var $version = '1.1.1';
+   var $version = '1.1.2';
    var $description = 'Displays active members in the footer of the CP';
    var $settings_exist = 'y';
    var $docs_url = '';
